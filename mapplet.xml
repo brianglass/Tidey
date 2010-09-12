@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs 
+	title="Tidey Ocean Tide Prediction Service"
+	description="View tide charts and weather information around the United States."
+	author="Tidey.info">
+	<Require feature="sharedmap"/>
+</ModulePrefs>
+
+<Content type="html"><![CDATA[
+
+<h2>The Tides have Turned.</h2>
+<p>We bring you good tidings... well actually <strong>ocean tide
+predictions</strong>. So whether you're planning a trip to the beach to collect
+shells, or to rev up the boat for a voyage out to sea, don't forget to stop in
+and check <a href="http://tidey.info/">Tidey</a> first.
+</p>
+
+<p>To get started just choose a blue marker and click on the link in the ballon.</p>
+
+<script type="text/javascript">
+	var gmap = new GMap2();
+	var geoXml = new GGeoXml("http://tidey.info/stations.kml");
+	gmap.addOverlay(geoXml);
+</script>
+]]></Content>
+</Module>

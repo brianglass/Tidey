@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2>The Tides have Turned.</h2>
+	<p>We bring you good tidings... well actually <strong>ocean tide predictions</strong>. So whether you're planning a trip to the beach
+	to collect shells, or to rev up the boat for a voyage out to sea, don't forget to stop in and check Tidey first.</p>
+{% end %}
+
+{% block map %}
+	<div id="tidemap"></div>
+{% end %}
+
+{% block javascript %}
+	<script src="http://www.google.com/jsapi?key=ABQIAAAAPyT2dy_300Hbp9DCrLLtnxSU2UmzemFlFFqfAmP3gSeY-Gd36BScdBJkvksi0nrPTIkX6S26fdhlkQ" type="text/javascript"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAPyT2dy_300Hbp9DCrLLtnxSU2UmzemFlFFqfAmP3gSeY-Gd36BScdBJkvksi0nrPTIkX6S26fdhlkQ"></script>
+	<!--<script src="/stations.js" type="text/javascript"></script>-->
+	<script type="text/javascript">
+		var map;
+
+		function mapsLoaded() {
+			var cl = google.loader.ClientLocation;
+			var gmap = new GMap2( document.getElementById("tidemap") );
+			gmap.setMapType( G_HYBRID_MAP );
+			//var manager = new GMarkerManager(gmap);
+			gmap.setUIToDefault();
+			gmap.addControl(new GLargeMapControl());
+			gmap.enableGoogleBar();
+
+			if( cl )
+				gmap.setCenter( new GLatLng( cl.latitude, cl.longitude ), 9 );
+			else
+				gmap.setCenter( new GLatLng( 41.875696, -87.624207 ), 3 );
+
+			var geoXml = new GGeoXml("http://tidey.info/stations.kml");
+			gmap.addOverlay(geoXml);
+			//populateMap(manager);
+
+			// ads
+			var ads = new GAdsManager(gmap, "pub-6296058264322635", {maxAdsOnMap:2, style:'adunit', channel:'6729124129'});
+			ads.enable();
+		} 
+
+		window.onload = mapsLoaded;
+		window.onunload = GUnload;
+	</script>
+{% end %}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Tidey ocean tide prediction service</name>
+		<atom:author>
+			<atom:name>Tidey</atom:name>
+		</atom:author>
+		<atom:link href="http://tidey.info" />
+
+		{% for s in stations %}
+		<Placemark>
+			<name>{{ escape(s['station']) }}</name>
+			<description><![CDATA[
+				<a href="http://tidey.info/{{ url_escape(s['slug']) }}/">View Tides</a>
+			]]></description>
+			<Point>
+				<coordinates>{{ '-' if s['ew']=='W' else '' }}{{ s['longitude'] }}, {{ '-' if s['ns']=='S' else '' }}{{ s['latitude'] }}</coordinates>
+			</Point>
+		</Placemark>
+		{% end %}
+	</Document>
+</kml>

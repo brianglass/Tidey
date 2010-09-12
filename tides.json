@@ -1,0 +1,13 @@
+({
+	heights: [
+		{% for height in heights %}
+		{
+			location: '{{ height[0] }}',
+			date: '{{ height[1] }}',
+			time: '{{ height[2] }}',
+			height: '{{ height[3] }}',
+			event: '{{ height[4] }}',
+		}
+		{% end %}
+	]
+})

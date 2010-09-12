@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Tidey - {% block title %}Tide Charts and More{% end %}</title>
+		<META name="y_key" content="fd59e83c5ddec022">
+		<meta name="google-site-verification" content="7g0hzg2SPZ4ksroH_d0mI0-TiMSP4spwuLOD1fjtAzM" />
+		{% block meta %}
+		<meta name="description" content="View tide charts and weather information.">
+		<meta name="keywords" content="beach, boat, ocean, sea, tide, tidal, waves, shore, surf, fishing, chart, moon, phase, marine">
+		{% end %}
+		<link rel="stylesheet" type="text/css" href="{{ static_url('jquery-ui-1.7.2.custom.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ static_url('tidey.css') }}" />
+	</head>
+	<body>
+		<div id="leaderboard">
+			<script type="text/javascript"><!--
+			google_ad_client = "pub-6296058264322635";
+			/* 468x60, created 12/10/09 */
+			google_ad_slot = "0794149187";
+			google_ad_width = 468;
+			google_ad_height = 60;
+			//-->
+			</script>
+			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+
+		<h1><a href="/">Tidey</a> <sup>Beta</sup></h1>
+
+		<div id="content">
+			{% block content %}
+			{% end %}
+		</div>
+
+		{% block map %}
+		{% end %}
+
+		<div id="bottomAd">
+			<script type="text/javascript"><!--
+			google_ad_client = "pub-6296058264322635";
+			/* 728x90, created 12/11/09 */
+			google_ad_slot = "3739407511";
+			google_ad_width = 728;
+			google_ad_height = 90;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+
+		<div id="disclaimer">
+			<h3>NOT FOR NAVIGATION<h3>
+			<p>This information is distributed in the hope that it will be
+			useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+			of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  The author
+			assumes no liability for damages arising from use of these
+			predictions. They are not certified to be correct, and they do not
+			incorporate the effects of tropical storms, El Niño, seismic
+			events, subsidence, uplift, or changes in global sea level.  </p>
+		</div>
+
+		{% block javascript %}
+		{% end %}
+
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-11971640-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+	</body>
+</html>

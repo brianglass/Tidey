@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:geo="http://www.google.com/geo/schemas/sitemap/1.0">
+	<url>
+		<loc>http://tidey.info/</loc>
+		<lastmod>2009-12-13</lastmod>
+		<changefreq>monthly</changefreq>
+	</url> 
+	<url>
+		<loc>http://tidey.info/stations.kml</loc>
+		<geo:geo>
+			<geo:format>kml</geo:format>
+		</geo:geo>
+	</url>
+	{% for s in stations %}
+	<url>
+		<loc>http://tidey.info/{{ s['slug'] }}/</loc>
+		<lastmod>2009-12-30</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	{% end %}
+</urlset>

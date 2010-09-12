@@ -1,0 +1,24 @@
+* { font-family: Helvetica, Arial, Geneva, sans-serif;}
+html { margin: 0; padding: 0; }
+body { background: url(/static/tidey.jpg) repeat-x top center; margin: 0; padding: 0; }
+#navigation { float: right; }
+h1 { position: relative; vertical-align: middle; display: block; width: 728px; height: 60px; padding-top: 0; margin: 0 auto; font-size: 40px; filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; visibility: hidden;}
+h1 * { filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; }
+h2 { color: white; margin: 25px 0 5px 0; }
+#content { color: #d0d0d0; top: 0; margin: 10px auto; width: 728px; height: 170px; overflow: hidden; }
+#content strong { color: #f0f0f0; }
+#tides, #tidemap { width: 728px; height: 400px; margin: 0 auto; padding: 0; }
+#tidemap { border: 3px solid black; }
+sup { font-size: 50%; }
+a { text-decoration: none; }
+#leaderboard { width: 468px; height: 60px; margin: 0 auto; padding-left: 270px; }
+#bottomAd { width: 728px; margin: 15px auto; }
+#disclaimer  { width: 728px; margin: 0 auto 30px auto; font-size: 9px; color: #909090; }
+#disclaimer p, #disclaimer h3 { font-size: 9px; color: #909090; }
+#moon { float: right; margin-top: 35px; }
+input#date { border: 1px solid black; font-size: 20px; color: #808080; font-weight: bold; width: 6em; }
+#dateNav { margin: 0 auto; text-align: center; width: 728px; }
+#previous, #next { font-size: 20px; font-weight: bold; color: black; }
+#previous:hover, #next:hover { color: #689CD1; }
+#weather { width: 435px; padding-left: 12px; height: 90px; }
+#NetweatherContainer { height: 75px; }
